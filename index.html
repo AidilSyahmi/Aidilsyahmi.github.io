@@ -56,6 +56,13 @@
       border-radius: 999px;
       font-weight: bold;
       transition: 0.3s;
+      text-align: center;
+      width: fit-content;
+    }
+
+    .btn:hover {
+      background: #0ea5e9;
+      transform: translateY(-3px);
     }
 
     .hero-buttons {
@@ -68,11 +75,6 @@
 
     .hero-buttons .btn {
       margin-top: 0;
-    }
-
-    .btn:hover {
-      background: #0ea5e9;
-      transform: translateY(-3px);
     }
 
     section {
@@ -89,6 +91,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 26px;
+      align-items: stretch;
     }
 
     .card {
@@ -109,6 +112,16 @@
       margin: 12px 0;
     }
 
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .project-card .btn {
+      margin-top: auto;
+    }
+
     .project-img {
       width: 100%;
       height: 190px;
@@ -119,13 +132,20 @@
       background: #0f172a;
     }
 
+    .certificate-card {
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .certificate-img {
       width: 100%;
-      height: 240px;
-      object-fit: cover;
+      aspect-ratio: 1 / 1.414;
+      object-fit: contain;
       border-radius: 15px;
       border: 2px solid #38bdf8;
-      background: #0f172a;
+      background: #ffffff;
       display: block;
     }
 
@@ -167,7 +187,7 @@
   <header>
     <h1>Hi, I'm <span>Aidil Syahmi</span></h1>
     <p>
-      IT Diploma student with ability  focus on software development, passionate in UI/UX design,
+      IT Diploma student with ability focus on software development, passionate in UI/UX design,
       and building real-world digital projects. Currently seeking internship opportunities.
     </p>
 
@@ -199,28 +219,28 @@
     <h2>Figma Projects</h2>
     <div class="grid">
 
-      <div class="card">
+      <div class="card project-card">
         <img class="project-img" src="ks_web.png" alt="KS Sublimation Jersey Ordering App Screenshot">
         <h3>KS Sublimation Jersey Ordering Web</h3>
         <p>A Figma design project focused on user interface, layout, and user experience in Ordering Website.</p>
         <a class="btn" href="https://www.figma.com/proto/R4JbhPu7VL7SsIgjmOt2dI/KsWebG12?node-id=2-5700&t=5i1y0UVFecE2FZmu-1" target="_blank">View Figma</a>
       </div>
 
-      <div class="card">
+      <div class="card project-card">
         <img class="project-img" src="bubur_app.png" alt="Bubur Bakar Stall Ordering App Screenshot">
         <h3>Bubur Bakar Stall Ordering App</h3>
         <p>A Mobile application interface that will help customer order Grill-Porridge Easily.</p>
         <a class="btn" href="https://www.figma.com/proto/CyHESxfPN2AhZTwktASemP/BUBOQ-STORYBOARD?node-id=0-1&t=btmbZpM9ur4vLLf2-1" target="_blank">View Figma</a>
       </div>
 
-      <div class="card">
+      <div class="card project-card">
         <img class="project-img" src="ks_app.png" alt="Figma Project 3 Screenshot">
         <h3>KS Sublimation Jersey Ordering App</h3>
         <p>Focus on KS sublimation App Version.</p>
         <a class="btn" href="https://www.figma.com/proto/Fqf4E2xuTIIxsM3eektVHv/Online-Retail-Clothing-App--Community-?node-id=559-1600&page-id=209%3A1823&starting-point-node-id=542%3A522&show-proto-sidebar=1&t=b6vYakHpPmHWA6R8-1" target="_blank">View Figma</a>
       </div>
 
-      <div class="card">
+      <div class="card project-card">
         <img class="project-img" src="figma-project-4.png" alt="Figma Project 4 Screenshot">
         <h3>Figma Project 4</h3>
         <p>Spare section.</p>
@@ -234,21 +254,21 @@
     <h2>Coding Projects</h2>
     <div class="grid">
 
-      <div class="card">
+      <div class="card project-card">
         <img class="project-img" src="coding-project-1.png" alt="Coding Project 1 Screenshot">
         <h3>Web Development Clinic Project</h3>
         <p>A coding project built using HTML, CSS, and JavaScript.</p>
         <a class="btn" href="#" target="_blank">View GitHub</a>
       </div>
 
-      <div class="card">
+      <div class="card project-card">
         <img class="project-img" src="coding-project-2.png" alt="Coding Project 2 Screenshot">
         <h3>TMBS Final Year Project</h3>
         <p>A recent software or web-based project from my diploma coursework or personal learning.</p>
         <a class="btn" href="#" target="_blank">Coming Soon</a>
       </div>
 
-      <div class="card">
+      <div class="card project-card">
         <img class="project-img" src="coding-project-3.png" alt="Coding Project 3 Screenshot">
         <h3>Mobile App Project</h3>
         <p>Spare section for your next coding project, website, system, or app.</p>
@@ -262,15 +282,15 @@
     <h2>Certificates</h2>
     <div class="grid">
 
-      <div class="card">
-        <img class="certificate-img" src="cert1.png" alt="Certificate 1">
+      <div class="card certificate-card">
+        <img class="certificate-img" src="certificate-1.png" alt="Certificate 1">
       </div>
 
-      <div class="card">
-        <img class="certificate-img" src="cert2.png" alt="Certificate 2">
+      <div class="card certificate-card">
+        <img class="certificate-img" src="certificate-2.png" alt="Certificate 2">
       </div>
 
-      <div class="card">
+      <div class="card certificate-card">
         <img class="certificate-img" src="certificate-3.png" alt="Certificate 3">
       </div>
 
@@ -283,7 +303,7 @@
       <a href="https://github.com/AidilSyahmi" target="_blank">GitHub</a>
       <a href="#" target="_blank">LinkedIn</a>
       <a href="#" target="_blank">Instagram</a>
-      <a href="aidilsyahmi2006@gmail.com">Email Me</a>
+      <a href="mailto:aidilsyahmi2006@gmail.com">Email Me</a>
     </div>
   </section>
 
