@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +25,7 @@
     }
 
     header {
-      padding: 80px 10%;
+      padding: 90px 10%;
       text-align: center;
       background: linear-gradient(135deg, #1e293b, #0f172a);
     }
@@ -36,12 +35,13 @@
       margin-bottom: 10px;
     }
 
-    header span {
+    header span,
+    .card h3 {
       color: #38bdf8;
     }
 
     header p {
-      max-width: 700px;
+      max-width: 750px;
       margin: 0 auto 25px;
       color: #cbd5e1;
       font-size: 18px;
@@ -50,7 +50,7 @@
     .btn {
       display: inline-block;
       padding: 12px 22px;
-      margin: 8px;
+      margin-top: 12px;
       background: #38bdf8;
       color: #020617;
       border-radius: 999px;
@@ -68,7 +68,7 @@
     }
 
     h2 {
-      font-size: 32px;
+      font-size: 34px;
       margin-bottom: 25px;
       color: #f8fafc;
     }
@@ -76,13 +76,13 @@
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+      gap: 26px;
     }
 
     .card {
       background: #1e293b;
       padding: 24px;
-      border-radius: 18px;
+      border-radius: 20px;
       border: 1px solid #334155;
       transition: 0.3s;
     }
@@ -92,14 +92,19 @@
       border-color: #38bdf8;
     }
 
-    .card h3 {
-      margin-bottom: 10px;
-      color: #38bdf8;
-    }
-
     .card p {
       color: #cbd5e1;
-      margin-bottom: 15px;
+      margin: 12px 0;
+    }
+
+    .project-img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 18px;
+      border: 1px solid #334155;
+      background: #0f172a;
     }
 
     .tag {
@@ -110,13 +115,6 @@
       font-size: 13px;
       margin: 4px;
       color: #e2e8f0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #020617;
-      color: #94a3b8;
     }
 
     .social a {
@@ -132,6 +130,13 @@
       background: #38bdf8;
       color: #020617;
     }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #020617;
+      color: #94a3b8;
+    }
   </style>
 </head>
 
@@ -144,7 +149,8 @@
       and building real-world digital projects. Currently seeking internship opportunities.
     </p>
 
-    <a href="#projects" class="btn">View Projects</a>
+    <a href="#figma" class="btn">View Figma Projects</a>
+    <a href="#coding" class="btn">View Coding Projects</a>
     <a href="#contact" class="btn">Contact Me</a>
   </header>
 
@@ -165,47 +171,64 @@
     </div>
   </section>
 
-  <section id="projects">
+  <section id="figma">
     <h2>Figma Projects</h2>
     <div class="grid">
 
       <div class="card">
+        <img class="project-img" src="ks-jersey.png" alt="KS Sublimation Jersey Ordering App Screenshot">
         <h3>KS Sublimation Jersey Ordering App</h3>
-        <p>
-          A Figma design project focused on user interface, layout, and user experience.
-        </p>
+        <p>A Figma design project focused on user interface, layout, and user experience.</p>
         <a class="btn" href="https://www.figma.com/proto/R4JbhPu7VL7SsIgjmOt2dI/KsWebG12?node-id=2-5700&t=5i1y0UVFecE2FZmu-1" target="_blank">View Figma</a>
       </div>
 
       <div class="card">
+        <img class="project-img" src="bubur-bakar.png" alt="Bubur Bakar Stall Ordering App Screenshot">
         <h3>Bubur Bakar Stall Ordering App</h3>
-        <p>
-          A mobile application interface design created using Figma.
-        </p>
+        <p>A mobile application interface design created using Figma.</p>
         <a class="btn" href="https://www.figma.com/proto/CyHESxfPN2AhZTwktASemP/BUBOQ-STORYBOARD?node-id=0-1&t=btmbZpM9ur4vLLf2-1" target="_blank">View Design</a>
+      </div>
+
+      <div class="card">
+        <img class="project-img" src="figma-project-3.png" alt="Figma Project 3 Screenshot">
+        <h3>Figma Project 3</h3>
+        <p>Spare section for your future UI/UX design project.</p>
+        <a class="btn" href="#" target="_blank">Coming Soon</a>
+      </div>
+
+      <div class="card">
+        <img class="project-img" src="figma-project-4.png" alt="Figma Project 4 Screenshot">
+        <h3>Figma Project 4</h3>
+        <p>Spare section for your future Figma prototype or design case study.</p>
+        <a class="btn" href="#" target="_blank">Coming Soon</a>
       </div>
 
     </div>
   </section>
 
-  <section>
+  <section id="coding">
     <h2>Coding Projects</h2>
     <div class="grid">
 
       <div class="card">
+        <img class="project-img" src="coding-project-1.png" alt="Coding Project 1 Screenshot">
         <h3>Web Development Project</h3>
-        <p>
-          A coding project built using HTML, CSS, and JavaScript.
-        </p>
-        <a class="btn" href="PASTE_GITHUB_PROJECT_LINK_HERE" target="_blank">View GitHub</a>
+        <p>A coding project built using HTML, CSS, and JavaScript.</p>
+        <a class="btn" href="#" target="_blank">View GitHub</a>
       </div>
 
       <div class="card">
+        <img class="project-img" src="coding-project-2.png" alt="Coding Project 2 Screenshot">
         <h3>Recent Project</h3>
-        <p>
-          A recent software or web-based project from my diploma coursework or personal learning.
-        </p>
-        <a class="btn" href="PASTE_PROJECT_LINK_HERE" target="_blank">View Project</a>
+        <p>A recent software or web-based project from my diploma coursework or personal learning.</p>
+        <a class="btn" href="#" target="_blank">View Project</a>
+      </div>
+
+      <div class="card">
+        <img class="project-img" src="coding-project-3.png" alt="Coding Project 3 Screenshot">
+        <h3>Coding Project 3</h3>
+        <p>Spare section for your next coding project, website, system, or app.</p>
+        <a class="btn" href="#" target="_blank">Coming Soon</a>
       </div>
 
     </div>
@@ -217,18 +240,14 @@
 
       <div class="card">
         <h3>Certificate Name</h3>
-        <p>
-          Add your course, competition, or achievement certificate here.
-        </p>
-        <a class="btn" href="PASTE_CERTIFICATE_LINK_HERE" target="_blank">View Certificate</a>
+        <p>Add your course, competition, or achievement certificate here.</p>
+        <a class="btn" href="#" target="_blank">View Certificate</a>
       </div>
 
       <div class="card">
         <h3>Achievement / Course</h3>
-        <p>
-          Add another relevant certificate or achievement.
-        </p>
-        <a class="btn" href="PASTE_CERTIFICATE_LINK_HERE" target="_blank">View Certificate</a>
+        <p>Add another relevant certificate or achievement.</p>
+        <a class="btn" href="#" target="_blank">View Certificate</a>
       </div>
 
     </div>
@@ -238,8 +257,8 @@
     <h2>Networking</h2>
     <div class="card social">
       <a href="https://github.com/AidilSyahmi" target="_blank">GitHub</a>
-      <a href="PASTE_LINKEDIN_LINK_HERE" target="_blank">LinkedIn</a>
-      <a href="PASTE_INSTAGRAM_OR_OTHER_LINK_HERE" target="_blank">Instagram</a>
+      <a href="#" target="_blank">LinkedIn</a>
+      <a href="#" target="_blank">Instagram</a>
       <a href="mailto:YOUR_EMAIL_HERE">Email Me</a>
     </div>
   </section>
@@ -257,28 +276,4 @@
   </footer>
 
 </body>
-=======
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Aidil Syahmi Portfolio</title>
-</head>
-<body>
-
-  <h1>Hi, I'm Aidil Syahmi</h1>
-  <p>IT Diploma student passionate about software development and UI/UX design.</p>
-
-  <h2>My Projects</h2>
-
-  <h3>💻 Coding Project</h3>
-  <a href="#">Coming soon</a>
-
-  <h3>🎨 UI/UX Design (Figma)</h3>
-  <a href="#">Coming soon</a>
-
-  <h2>Contact</h2>
-  <p>Email: aidilsyahmi2006@email.com</p>
-
-</body>
-
 </html>
