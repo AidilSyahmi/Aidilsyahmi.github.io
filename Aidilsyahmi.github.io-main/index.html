@@ -329,10 +329,28 @@
       align-items: stretch;
     }
 
-    /* Keep Coding Project cards at a consistent width.
-       The fourth card stays in one column instead of stretching across the row. */
+    /* CODING PROJECT GRID FIX
+       Every coding card uses the same column width.
+       The fourth Angular card remains one normal card in the next row. */
     .coding-grid {
+      display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-auto-flow: row;
+      grid-auto-rows: 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .coding-grid > .project-card {
+      width: 100%;
+      min-width: 0;
+      height: 100%;
+      grid-column: auto;
+      justify-self: stretch;
+    }
+
+    .coding-grid > .angular-card {
+      grid-column: 1;
     }
 
     .card {
@@ -870,7 +888,7 @@
             </div>
           </div>
 
-          <div class="card project-card">
+          <div class="card project-card angular-card">
             <div class="project-img-wrap">
               <span class="project-badge">Frontend</span>
               <img class="project-img" src="FrontEndTest.png" alt="Testing Frontend Architecture Project Screenshot">
