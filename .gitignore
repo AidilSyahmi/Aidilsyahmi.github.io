@@ -1,0 +1,11 @@
+# Publish only the two reviewed showcase documents per project.
+/isurvey/*
+!/isurvey/index.html
+!/isurvey/README.md
+/pis-portal-developer/*
+!/pis-portal-developer/index.html
+!/pis-portal-developer/README.md
+# Local working copies; canonical public files live at the repository root.
+/Aidilsyahmi.github.io-main/assets/
+/Aidilsyahmi.github.io-main/isurvey/
+/Aidilsyahmi.github.io-main/pis-portal-developer/

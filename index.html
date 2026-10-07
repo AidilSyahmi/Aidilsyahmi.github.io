@@ -329,9 +329,7 @@
       align-items: stretch;
     }
 
-    /* CODING PROJECT GRID FIX
-       Every coding card uses the same column width.
-       The fourth Angular card remains one normal card in the next row. */
+    /* Coding projects keep equal widths across both rows. */
     .coding-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -375,7 +373,7 @@
       inset: -1px;
       background:
         radial-gradient(
-          520px circle at var(--x, 50%) var(--y, 50%),
+          520px circle at 50% 50%,
           rgba(56, 189, 248, 0.20),
           transparent 42%
         );
@@ -473,19 +471,19 @@
     .project-img {
       width: 100%;
       height: 205px;
-      object-fit: cover;
+      object-fit: contain;
       transition: transform 0.45s ease, filter 0.45s ease;
     }
 
     .project-card:hover .project-img {
-      transform: scale(1.06);
+      transform: none;
       filter: saturate(1.18) contrast(1.05);
     }
 
     .project-badge {
-      position: absolute;
-      top: 12px;
-      left: 12px;
+      position: relative;
+      display: inline-flex;
+      margin: 10px 12px 0;
       padding: 6px 10px;
       border-radius: 999px;
       font-size: 12px;
@@ -905,6 +903,42 @@
             </div>
           </div>
 
+          <div class="card project-card">
+            <div class="project-img-wrap">
+              <span class="project-badge">Web System</span>
+              <img class="project-img" src="assets/projects/isurvey.png" alt="LPPSA iSurvey internal survey management system landing page" loading="lazy">
+            </div>
+
+            <div class="project-content">
+              <h3>LPPSA iSurvey</h3>
+              <p>
+                An internal survey management system for creating surveys, collecting feedback,
+                and turning responses into meaningful improvements at LPPSA.
+              </p>
+              <a class="btn" href="https://github.com/AidilSyahmi/Aidilsyahmi.github.io/tree/main/isurvey" target="_blank" rel="noopener noreferrer">
+                View Repo
+              </a>
+            </div>
+          </div>
+
+          <div class="card project-card">
+            <div class="project-img-wrap">
+              <span class="project-badge">Frontend</span>
+              <img class="project-img" src="assets/projects/check-and-pay.png" alt="LPPSA Check and Pay portal with search, user guides, and frequently asked questions" loading="lazy">
+            </div>
+
+            <div class="project-content">
+              <h3>LPPSA Check &amp; Pay Portal</h3>
+              <p>
+                A responsive portal prototype for account searches and payment flows,
+                with user guides, infographics, and frequently asked questions.
+              </p>
+              <a class="btn" href="https://github.com/AidilSyahmi/Aidilsyahmi.github.io/tree/main/pis-portal-developer" target="_blank" rel="noopener noreferrer">
+                View Repo
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>      
     </section>
@@ -988,21 +1022,6 @@
   <footer>
     <p>© 2026 Aidil Syahmi. All rights reserved.</p>
   </footer>
-
-  <script>
-    const cards = document.querySelectorAll(".card");
-
-    cards.forEach((card) => {
-      card.addEventListener("mousemove", (event) => {
-        const rect = card.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-
-        card.style.setProperty("--x", `${x}px`);
-        card.style.setProperty("--y", `${y}px`);
-      });
-    });
-  </script>
 
 </body>
 </html>
