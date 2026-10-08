@@ -710,6 +710,8 @@
     @media(max-width:640px) {.hero-stage {grid-template-columns:1fr;}.portrait-panel {min-height:360px;}.portrait {object-fit:contain;object-position:center;background:#ddd;}.hero-editorial-copy {padding:26px 22px;}.hero-editorial-copy h2 {font-size:37px;}.hero-name {white-space:normal;}header .hero-name {font-size:clamp(44px,12vw,76px);padding:24px 18px;}.hero-bottom {padding:17px 20px;flex-direction:column;gap:8px;}.profile-facts {grid-template-columns:1fr;gap:20px;}.nav-links {gap:0;}.nav-links a {padding:8px 10px;}.portrait-caption {bottom:18px;}.hero-bottom a {width:fit-content;}}
     @media(prefers-reduced-motion:reduce) {html {scroll-behavior:auto;}*,*::before,*::after {animation:none!important;transition:none!important;}}
     @media(max-width:640px) {.nav-links {flex-wrap:wrap;overflow:visible;padding-bottom:0;}.nav-inner {gap:8px;padding:12px 0;}.nav-links a {font-size:12px;padding:5px 8px;}.portrait-caption {bottom:0;padding:14px 18px;}html {scroll-padding-top:130px;}}
+    .ui-arrow {width:14px;height:14px;display:inline-block;vertical-align:-2px;flex-shrink:0;}
+    .arrow-down-right {transform:rotate(90deg);}.arrow-down {transform:rotate(135deg);}
   </style>
 </head>
 
@@ -733,23 +735,23 @@
   <header class="editorial-hero">
     <div class="container hero-stage">
       <div class="portrait-panel">
-        <span class="portrait-label">A little about me <span aria-hidden="true">↘</span></span>
+        <span class="portrait-label">A little about me <span aria-hidden="true"><svg class="ui-arrow arrow-down-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></span>
         <img class="portrait" src="assets/profile/aidil-syahmi.jpg" alt="Portrait of Aidil Syahmi" width="234" height="324" fetchpriority="high">
         <div class="portrait-caption"><span>DEVELOPMENT &amp; DESIGN</span><span>Thoughtful interfaces.<br>Practical solutions.</span></div>
       </div>
       <div class="hero-editorial-copy">
-        <div class="hero-kicker"><span>PORTFOLIO / 2026</span><a href="#contact">Let’s connect ↗</a></div>
+        <div class="hero-kicker"><span>PORTFOLIO / 2026</span><a href="#contact">Let’s connect <svg class="ui-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
         <h2>From an idea<br>to a working <em>experience.</em></h2>
         <p class="hero-intro">I’m Aidil, a junior developer at the start of my career. My internship at LPPSA gave me hands-on experience with projects including iSurvey and the PIS Check &amp; Pay prototype. I’m still learning, building small projects and improving my coding and interface design skills along the way.</p>
         <nav class="work-index" aria-label="Explore my work">
-          <a href="#coding"><span>Web &amp; system development</span><span>01 ↗</span></a>
-          <a href="#figma"><span>Interface &amp; visual design</span><span>02 ↗</span></a>
-          <a href="#about"><span>Systems analysis &amp; testing</span><span>03 ↗</span></a>
+          <a href="#coding"><span>Web &amp; system development</span><span>01 <svg class="ui-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+          <a href="#figma"><span>Interface &amp; visual design</span><span>02 <svg class="ui-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+          <a href="#about"><span>Systems analysis &amp; testing</span><span>03 <svg class="ui-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
         </nav>
         <p class="hero-footnote">Exploring AI-assisted development with Codex and Hermes Agent, while building my understanding of the code and checking the results.</p>
       </div>
       <h1 class="hero-name">Aidil <em>Syahmi</em><span class="name-dot">.</span></h1>
-      <div class="hero-bottom"><span>Junior developer · Learning by building</span><a href="#coding">Explore selected work <span aria-hidden="true">↓</span></a></div>
+      <div class="hero-bottom"><span>Junior developer · Learning by building</span><a href="#coding">Explore selected work <span aria-hidden="true"><svg class="ui-arrow arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a></div>
     </div>
   </header>
 
@@ -960,7 +962,7 @@
               <p>
                 Housing Terrace Project Website Design Using Angular.
               </p>
-              <a class="btn" href="https://github.com/AidilSyahmi/TagMeBackStation-FYP-" target="_blank" rel="noopener noreferrer">
+              <a class="btn" href="https://github.com/AidilSyahmi/HousingFrontendProject" target="_blank" rel="noopener noreferrer">
                 View Repo
               </a>
             </div>
@@ -978,7 +980,7 @@
                 An internal survey management system for creating surveys, collecting feedback,
                 and turning responses into meaningful improvements at LPPSA.
               </p>
-              <a class="btn" href="https://github.com/AidilSyahmi/Aidilsyahmi.github.io/tree/main/isurvey" target="_blank" rel="noopener noreferrer">
+              <a class="btn" href="https://github.com/AidilSyahmi/Lppsa_iSurvey" target="_blank" rel="noopener noreferrer">
                 View Repo
               </a>
             </div>
@@ -996,7 +998,7 @@
                 A responsive portal prototype for account searches and payment flows,
                 with user guides, infographics, and frequently asked questions.
               </p>
-              <a class="btn" href="https://github.com/AidilSyahmi/Aidilsyahmi.github.io/tree/main/pis-portal-developer" target="_blank" rel="noopener noreferrer">
+              <a class="btn" href="https://github.com/AidilSyahmi/LPPSA-PIS-Check-and-Pay" target="_blank" rel="noopener noreferrer">
                 View Repo
               </a>
             </div>

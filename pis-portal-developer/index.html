@@ -1,23 +1,75 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="A responsive Check & Pay portal interface concept bringing account search, payment guidance, and frequently asked questions into one clear experience.">
-<title>LPPSA Check & Pay Portal | Aidil Syahmi</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A public code sample of an account lookup, amount review and simulated payment receipt workflow.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<title>PIS — Check & Pay demo | Portfolio demo</title>
 <style>
-:root{color-scheme:dark;font-family:Arial,Helvetica,sans-serif;background:#020617;color:#e5e7eb}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,rgba(56,189,248,.12),transparent 65%);line-height:1.65}main{max-width:1180px;margin:auto;padding:36px 24px 64px}a{color:#7dd3fc;text-underline-offset:4px}a:focus-visible{outline:2px solid #7dd3fc;outline-offset:6px}header{padding:36px 0 24px}.eyebrow{color:#7dd3fc;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}h1{font-size:clamp(30px,5vw,52px);line-height:1.15;margin:12px 0 16px;letter-spacing:-1px}p{max-width:760px;color:#cbd5e1}.preview{margin:0;overflow:hidden;border:1px solid #334155;border-radius:20px;background:#0f172a}.preview img{width:100%;height:auto;display:block}.preview figcaption{padding:12px 20px;font-size:13px;color:#94a3b8}.details{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:24px}.panel{padding:24px;background:#0f172a;border:1px solid #334155;border-radius:20px}h2{margin:0 0 12px;font-size:20px;color:#e0f2fe}ul{padding-left:20px;color:#cbd5e1}.panel p{margin:0}footer{margin-top:28px;color:#94a3b8;font-size:13px}@media(max-width:640px){main{padding:24px 16px 40px}.details{grid-template-columns:1fr}}
+:root{font-family:system-ui,sans-serif;color:#172b4d;background:#eef3fa;line-height:1.6}*{box-sizing:border-box}body{margin:0}header{background:linear-gradient(120deg,#102d62,#2563b5);color:white;padding:42px max(20px,calc((100% - 1080px)/2))}header a{color:#e4efff}h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:18px 0 14px}h2{font-size:22px;margin:0 0 16px}h3{margin:0 0 10px}p{max-width:760px}main{max-width:1120px;margin:auto;padding:28px 20px 60px}.notice{padding:14px 18px;border:1px solid #d6bd79;background:#fff9e6;border-radius:12px;margin-bottom:24px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.panel{background:white;border:1px solid #d8e1ed;border-radius:18px;padding:26px;margin-bottom:24px;min-width:0}label{display:block;font-weight:600;margin:16px 0 6px}input,select,button{font:inherit}input,select{width:100%;padding:12px;border:1px solid #94a6be;border-radius:9px;background:white;color:#172b4d}button{border:0;border-radius:9px;padding:12px 18px;background:#1958aa;color:white;font-weight:600;cursor:pointer;margin:18px 8px 0 0}button.secondary{background:#e9eff7;color:#172b4d}button:disabled{opacity:.6;cursor:default}a{color:#164f99}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #bc861a;outline-offset:3px}.muted{color:#52657f;font-size:14px}.status{min-height:1.6em;color:#124d39;font-weight:600}.error{color:#982e28}.stats{display:flex;gap:28px;flex-wrap:wrap}.stats strong{display:block;font-size:32px;line-height:1.2}.stats span{font-size:13px;color:#52657f}progress{display:block;width:100%;height:16px;accent-color:#1958aa;margin:6px 0 16px}.badge{display:inline-block;border-radius:40px;padding:5px 12px;background:#e7f3e9;color:#245c38;font-size:12px}dl{display:grid;grid-template-columns:1fr 1fr;gap:12px}dt{color:#52657f}dd{margin:0;font-weight:600;overflow-wrap:anywhere}details{border-top:1px solid #d8e1ed;padding:14px 0}summary{cursor:pointer;font-weight:600}footer{color:#52657f;font-size:13px}[hidden]{display:none!important}@media(max-width:700px){.grid{grid-template-columns:1fr}.panel{padding:20px}header{padding:28px 20px}dl{grid-template-columns:1fr;gap:4px}dd{margin-bottom:12px}}
 </style>
 </head>
 <body>
-<main>
-<a href="../index.html#coding">&larr; Back to portfolio</a>
-<header><span class="eyebrow">Portal interface &middot; Portfolio showcase</span><h1>LPPSA Check & Pay Portal</h1><p>A responsive Check & Pay portal interface concept bringing account search, payment guidance, and frequently asked questions into one clear experience.</p></header>
-<figure class="preview"><img src="../assets/projects/check-and-pay.png" alt="LPPSA Check & Pay Portal interface preview"><figcaption>Full interface preview &middot; Design showcase</figcaption></figure>
-<div class="details"><section class="panel"><h2>Project highlights</h2><ul><li>Account search interface concept</li>
-<li>User guides and infographics</li>
-<li>Frequently asked questions</li></ul></section><section class="panel"><h2>About this showcase</h2><p>This page presents the interface design only. The operational application and its internal implementation are kept private. No live account search, sign-in, survey collection, or payment service is connected.</p></section></div>
-<footer>Designed and presented by Aidil Syahmi &middot; <a href="README.md">Project README</a></footer>
+<header><a href="https://aidilsyahmi.github.io/#coding">Aidil Syahmi / Portfolio</a><h1>PIS — Check & Pay demo</h1><p>A public code sample of an account lookup, amount review and simulated payment receipt workflow.</p><span>AI-assisted development · Public code sample</span></header>
+<main><div class="notice"><strong>Standalone portfolio demo.</strong> Fictional data only. No connection to LPPSA systems. Everything stays in this page's memory and resets on reload. Please do not enter personal information.</div>
+<div class="grid"><section class="panel"><h2>1. Check a demo account</h2><p>Explore the account lookup and payment review flow using a fictional reference.</p>
+<form id="search-form"><label for="reference">Demo reference</label><input id="reference" value="DEMO-001" maxlength="20" required autocomplete="off" aria-describedby="reference-hint"><p id="reference-hint" class="muted">Only DEMO-001 is available. Do not enter an identity or bank account number.</p><button type="submit">Search demo account</button></form><p id="search-status" class="status" role="status"></p></section>
+<section class="panel" id="account-panel" hidden><h2>2. Review an amount</h2><dl><dt>Account</dt><dd>DEMO-001</dd><dt>Account holder</dt><dd>Fictional Customer</dd><dt>Demo balance</dt><dd>RM 1,200.00</dd></dl>
+<form id="amount-form"><label for="amount">Simulated payment amount (RM)</label><input id="amount" type="number" min="1" max="1200" step="0.01" value="100" required><button type="submit">Review simulation</button></form><p id="amount-error" class="error" role="alert"></p></section></div>
+<section class="panel" id="confirmation" hidden><h2>3. Confirm the simulation</h2><p id="review-text"></p><p>No money will move. No payment provider or banking service is connected.</p><button id="confirm" type="button">Simulate payment</button><button id="edit" class="secondary" type="button">Edit amount</button></section>
+<section class="panel" id="receipt" hidden tabindex="-1"><span class="badge">Simulation complete</span><h2>Demo receipt — not valid for payment</h2><dl><dt>Reference</dt><dd id="receipt-id"></dd><dt>Amount</dt><dd id="receipt-amount"></dd><dt>Demo remaining balance</dt><dd id="receipt-balance"></dd></dl><p class="muted">This receipt is fictional and has no financial value.</p></section>
+<p id="flow-status" class="status" role="status"></p><button id="reset" class="secondary" type="button">Reset demo</button>
+<section class="panel" style="margin-top:24px"><h2>Guides &amp; frequently asked questions</h2><details><summary>How do I try the demo?</summary><p>Search DEMO-001, enter an amount from RM 1.00 to RM 1,200.00, review it, then simulate the payment. Reset to try again.</p></details><details><summary>Does this check a real account or make a payment?</summary><p>No. All account values and receipts are fictional. No data is sent to a server.</p></details><details><summary>What does this project demonstrate?</summary><p>Responsive interface structure, form validation, a guarded multi-step flow, currency formatting and safe rendering of page content.</p></details></section>
+<footer>Prepared by Aidil Syahmi with AI assistance. This is a simplified public demonstration, not the production application. <a href="README.md">Read the project overview</a>.</footer>
 </main>
+<script>
+'use strict';
+// Fictional in-memory data. This demo is deliberately separate from the internal portal.
+const byId = id => document.getElementById(id);
+const money = cents => 'RM ' + (cents / 100).toLocaleString('en-MY',{minimumFractionDigits:2,maximumFractionDigits:2});
+const balanceCents = 120000;
+let state = {stage:'search',amountCents:0};
+function render() {
+  byId('account-panel').hidden = !['amount','review'].includes(state.stage);
+  byId('confirmation').hidden = state.stage !== 'review';
+  byId('receipt').hidden = state.stage !== 'receipt';
+  byId('amount').disabled = state.stage === 'review';
+  byId('amount-form').querySelector('button').disabled = state.stage === 'review';
+}
+byId('search-form').addEventListener('submit', event => {
+  event.preventDefault();
+  state = {stage:'search',amountCents:0};
+  byId('amount-error').textContent = ''; byId('flow-status').textContent = '';
+  if(byId('reference').value.trim().toUpperCase() !== 'DEMO-001') {
+    byId('search-status').textContent = 'No demo account found. Use DEMO-001.'; render(); return;
+  }
+  state.stage = 'amount'; byId('search-status').textContent = 'Fictional demo account found.'; render();
+});
+byId('amount-form').addEventListener('submit', event => {
+  event.preventDefault(); if(state.stage !== 'amount') return;
+  const raw = byId('amount').value;
+  if(!/^\d+(\.\d{1,2})?$/.test(raw)) {byId('amount-error').textContent='Enter an amount with up to two decimal places.';return;}
+  const cents = Math.round(Number(raw)*100);
+  if(!Number.isSafeInteger(cents) || cents < 100 || cents > balanceCents) {byId('amount-error').textContent='Use an amount between RM 1.00 and RM 1,200.00.';return;}
+  state.amountCents = cents; state.stage = 'review'; byId('amount-error').textContent = '';
+  byId('review-text').textContent = 'Simulate ' + money(cents) + ' for fictional account DEMO-001.'; render();
+});
+byId('edit').addEventListener('click',()=> {if(state.stage==='review'){state.stage='amount';render();}});
+byId('confirm').addEventListener('click',()=> {
+  if(state.stage !== 'review') return;
+  state.stage = 'receipt';
+  byId('receipt-id').textContent = 'DEMO-RECEIPT-001';
+  byId('receipt-amount').textContent = money(state.amountCents);
+  byId('receipt-balance').textContent = money(balanceCents-state.amountCents);
+  byId('flow-status').textContent = 'Simulation completed. No real payment was made.';
+  render(); byId('receipt').focus();
+});
+byId('reset').addEventListener('click',()=> {
+  state = {stage:'search',amountCents:0}; byId('search-form').reset();byId('amount-form').reset();
+  byId('search-status').textContent='';byId('amount-error').textContent='';byId('flow-status').textContent='Demo reset.';render();
+});
+render();
+</script>
 </body>
 </html>

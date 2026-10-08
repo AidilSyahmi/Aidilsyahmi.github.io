@@ -1,23 +1,41 @@
-# LPPSA Check & Pay Portal
+# LPPSA PIS Check & Pay Portal
 
-A responsive Check & Pay portal interface concept bringing account search, payment guidance, and frequently asked questions into one clear experience.
+## What is this system for?
 
-[View the interface showcase](https://aidilsyahmi.github.io/pis-portal-developer/)
+The original portal prototype brings account checking, payment guidance, user guides and frequently asked questions into one interface. It demonstrates a clearer flow from searching for an account to reviewing a payment.
 
-![Full interface preview](../assets/projects/check-and-pay.png)
+## Public code sample
 
-## Highlights
+This repository contains one self-contained code file, **index.html**, and this README. The original prototype uses modular JavaScript. This public sample combines HTML, CSS and JavaScript into one file.
 
-- Account search interface concept
-- User guides and infographics
-- Frequently asked questions
+Search the fictional DEMO-001 account; validate an amount; review it; simulate a payment; display a fictional receipt; reset the demo.
 
-## Public portfolio scope
+This is a simplified public demonstration prepared for my portfolio, not the full internal application or a claim that these browser-only controls are production security.
 
-This folder intentionally contains only `index.html` and `README.md`. The preview image is stored in the portfolio's shared `assets/projects` directory.
+## My role and AI assistance
 
-This is a static design showcase, not a live operational service. Application source, backend logic, environment configuration, credentials, databases, account details, survey responses, uploads, and internal documents are not included.
+I am a junior developer at the start of my career. During my Developer & System Analyst internship at LPPSA, I gained experience with development, testing, debugging and requirements documentation.
 
-## Viewing
+I use AI tools, including Codex and Hermes Agent, to support learning and development. This public sample was prepared with AI assistance. It is intended to demonstrate code structure and explain a workflow while I continue building my ability to understand, test and improve the result. I do not claim that every line was written without assistance.
 
-Open the showcase link above, or serve the portfolio root with a local static web server. No dependencies or build step are required.
+## How to run
+
+1. Download index.html.
+2. Open it in a modern browser. No installation, build tools or API keys are needed.
+3. Follow the numbered workflow. Use only fictional example values.
+
+You can also [open the hosted portfolio demo](https://aidilsyahmi.github.io/pis-portal-developer/).
+
+## Privacy and limitations
+
+- All demo data is fictional and held only in page memory. Reloading resets it.
+- No network requests, analytics, cookies, local storage or external dependencies.
+- No real accounts, survey responses, staff records, credentials, environment files, internal URLs, uploads or database exports are included.
+- No production source code, authentication, role permissions, backend integrations or payment processing is included.
+- User-entered text is displayed with textContent rather than interpreted as HTML.
+- The inline Content Security Policy blocks network connections and form submission. It is a demo safeguard, not a substitute for production security.
+- A production implementation would require server-side validation, access control, persistence, audit logging and appropriate service integrations.
+
+## Manual checks
+
+Try an unknown reference, then DEMO-001. Negative, zero and over-balance amounts must be rejected. Review RM 100.00, edit it, then simulate RM 250.00. The demo receipt should show RM 250.00 and a remaining balance of RM 950.00. Reset clears the receipt.
